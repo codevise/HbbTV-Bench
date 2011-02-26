@@ -1,0 +1,26 @@
+<table>
+  <thead>
+    <tr>
+      <th>Test</th>
+      <th>Test Description</th>
+      <th>Browser</th>
+      <th>Runs</th>
+      <th>Avg</th>
+      <th>Min</th>
+      <th>Max</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for test_run in @test_runs %>
+    <tr class="<%= cycle "odd", "even" %>">
+      <td><%= link_to test_run.test_case.test_id, test_run.test_case %></td>
+      <td><%= test_run.test_case.description %></td>
+      <td><%= link_to test_run.browser.user_agent, test_run.browser %></td>
+      <td><%= test_run.runs %></td>
+      <td><%= test_run.avg %></td>
+      <td><%= test_run.min %></td>
+      <td><%= test_run.max %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

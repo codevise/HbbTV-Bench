@@ -1,0 +1,16 @@
+<% title "Test Cases" %>
+
+<table>
+  <tr>
+    <th>Test</th>
+    <th>Description</th>
+    <th>Actions</th>
+  </tr>
+  <% for test_case in @test_cases %>
+    <tr class="<%= cycle "odd", "even" %>">
+      <td><%= test_case.test_id %></td>
+      <td><%= test_case.description %></td>
+      <td><%= link_to "Show", test_case %></td>
+    </tr>
+  <% end %>
+</table>

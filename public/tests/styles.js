@@ -1,4 +1,4 @@
-test("styles", "add/rm class,  add/rm style Performance", function () { 
+test("styles", "add rm class add rm style Performance", function () { 
     var testContent = document.getElementById("test-content"); 
     testContent.innerHTML = "<div id='style-test-content' style='height: 10px; width: 10px;'></div>";
     var div = document.getElementById("style-test-content"); 

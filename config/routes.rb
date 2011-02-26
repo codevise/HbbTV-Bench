@@ -1,4 +1,10 @@
 Bench::Application.routes.draw do
+  resources :test_cases
+
+  resources :browsers
+
+  resources :test_runs
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

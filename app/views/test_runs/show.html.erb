@@ -1,0 +1,30 @@
+<% title "Test Run" %>
+
+<p>
+  <strong>Test:</strong>
+  <%= @test_run.test_id %>
+</p>
+<p>
+  <strong>Test Description:</strong>
+  <%= @test_run.test_description %>
+</p>
+<p>
+  <strong>Runs:</strong>
+  <%= @test_run.runs %>
+</p>
+<p>
+  <strong>Avg:</strong>
+  <%= @test_run.avg %>
+</p>
+<p>
+  <strong>Min:</strong>
+  <%= @test_run.min %>
+</p>
+<p>
+  <strong>Max:</strong>
+  <%= @test_run.max %>
+</p>
+
+<p>
+  <%= link_to "View All", test_runs_path %>
+</p>

@@ -73,3 +73,15 @@ a {
 .error_messages ul {
   margin: 0;
 }
+
+td, th { 
+  padding: 5px 10px;
+}
+
+th { 
+  background-color: #c0c0c0;
+}
+
+.even { 
+  background-color: #e0e0e0;
+} 

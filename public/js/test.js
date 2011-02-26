@@ -1,13 +1,13 @@
 (function () { 
     
-    // create tests namespace
+    // create tests idspace
     window.tests = {};
 
     // DSL for creating tests;
-    window.test = function (name, description, fn) { 
-	fn.name = name; 
+    window.test = function (id, description, fn) { 
+	fn.id = id; 
 	fn.description = description; 
-	tests[name] = fn; 
+	tests[id] = fn; 
     }
 
     var TestCase = window.TestCase = function (fn) {
@@ -15,8 +15,8 @@
     };
 
     Object.extend(TestCase, {
-	create: function (name) { 
-	    var test = window.tests[name]; 
+	create: function (id) { 
+	    var test = window.tests[id]; 
 	    if (test !== undefined && typeof test == "function") { 
 		return new TestCase(test); 
 	    }
@@ -26,8 +26,8 @@
 
     Object.extend(TestCase.prototype, {
 
-	name: function () { 
-	    return this._fn.name;
+	id: function () { 
+	    return this._fn.id;
 	},
 	
 	description: function () { 

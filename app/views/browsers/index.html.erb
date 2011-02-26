@@ -1,0 +1,17 @@
+<% title "Browsers" %>
+
+<table>
+  <tr>
+    <th>User Agent</th>
+    <!--th>Name</th-->
+    <th>Actions</th>
+  </tr>
+  <% for browser in @browsers %>
+  <tr class="<%= cycle "odd", "even" %>">
+    <td><%= browser.user_agent %></td>
+    <!--td><%= browser.name %></td-->
+    <td><%= link_to "Show Results", browser %></td>
+  </tr>
+  <% end %>
+</table>
+
