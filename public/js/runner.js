@@ -64,7 +64,7 @@
             var json = "{\"test_case\": {\"test_id\": "+ testSeries.testCase().id() +", \"description\": " + testSeries.testCase().description().replace("\"", "\\\"") + "}, \"test_run\": {\"runs\": " + testSeries.runs() + ", \"avg\":  " + testSeries.avg() + ", \"min\": " + testSeries.min() + ", \"max\": " + testSeries.max() + " } }"
 
             var request = new XMLHttpRequest();
-            request.open("POST", "/test_runs.json", true);
+            request.open("POST", "test_runs.json", true);
             request.setRequestHeader("Content-type", "application/json");
             request.send(json);
         }
